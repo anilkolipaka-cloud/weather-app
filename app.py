@@ -27,7 +27,7 @@ def get_weather(api_key, city):
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    if request.method == 'POST ':
+    if request.method == 'POST':
         city = request.form['city']
         api_key = var.key
         weather_data = get_weather(api_key, city)
